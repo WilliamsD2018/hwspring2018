@@ -1,8 +1,0 @@
-variable = float (raw_input ("Enter a number"))
-
-if (variable%2 == 0):
-	finalNumber = (variable + 1)* 3.0
-	print (finalNumber)
-else:
-	finalNumber = variable/2.0
-	print (finalNumber) 
