@@ -1,1 +1,5 @@
-e
+print("Enter your sentence and it will be split in half")
+sen = raw_input()
+sen = sen.split()
+complete_sentence = "\n" .join(sen)
+print(complete_sentence)
