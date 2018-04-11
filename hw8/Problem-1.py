@@ -2,6 +2,7 @@ import random
 user1 = 0
 user2 = 0
 
+def Round_winner(
 while user1 < 2 and user2 < 2:
 	turn1 = random.randint(1,6)
 	turn2 = random.randint(1,6)
