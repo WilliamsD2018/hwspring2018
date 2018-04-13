@@ -1,25 +1,60 @@
 import random
-user1 = 0
-user2 = 0
 
-def Round_winner(
-while user1 < 2 and user2 < 2:
-	turn1 = random.randint(1,6)
-	turn2 = random.randint(1,6)
-	if turn1 > turn2:
-		print("user 1 is the winner of the round")
-		user1 += 1
-		print(turn1)
-	elif turn2 > turn1:
-		print("user 2 is the winner of the round")
-		user2 +=1
-		print(turn2)
-	elif turn1 == turn2:
-		print("Draw")
+def roll(beginning, end):
+	return random.randint(beginning, end)
 
-print("Result")
-print(user1, user2)
-if user1 > user2:
-	print("user1 wins")
-elif(user2 > user1):
-	print("user2 wins")
+
+
+
+
+
+
+def RoundWinner(score1, score2):
+	if(score1 > 1):
+		return "player1"
+	elif(score2 > 1):
+		return "player2"
+	else:
+		return "tie"
+
+
+
+def GameWinner(rollresult1, rollresult2):
+	if(rollresult1 > rollresult2):
+		return "Plyer 1 is the Winner"
+	elif(rollresult2 > rollresult1):
+		return "Player 2 is the winner"
+	else:
+		return "Nobody Wins"
+
+
+
+
+beginning = 1
+end = 6
+score1=0
+score2=0
+rollresult1=0
+rollresult2=0
+range1=(beginning, end)
+range2=(beginning, end)
+Runtime = 2
+
+
+
+
+
+while(Runtime):
+	score1 = roll(beginning, end)
+	score2 = roll(beginning, end)
+	RollWinner = RoundWinner(rollresult1, rollresult2)
+	if(score1 > score2):
+		rollresult1 +=1
+	elif(score2 > score1):
+		rollresult2 += 1
+	Runtime -=1
+	print(score1,score2,RollWinner)
+
+	Winner = GameWinner(rollresult1,rollresult2)
+
+	print(GameWinner)
